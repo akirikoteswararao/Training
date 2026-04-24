@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 700px;
+            margin: 30px auto;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: #bcd4d4;
+        }
+
+        h1 {
+            text-align: center;
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .full-width {
+            width: 60%;
+        }
+
+       
+
+        .buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Student Registration Form</h1>
+
+        <form>
+            <label>Name :</label>
+            <input type="text" placeholder="Enter full name" required class="full-width"><br>
+
+            <label>Father's Name :</label>
+            <input type="text" required class="full-width"><br>
+
+            <label>Mother's Name :</label>
+            <input type="text" required  class="full-width"><br>
+
+            <label>Phone Number :</label>
+            <input type="text" required  placeholder="017xxxxxxxx" class="full-width"><br>
+
+            <label>Email :</label>
+            <input type="email" required  placeholder="sample@example.com" class="full-width"><br>
+
+            <label>Gender :</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other<br><br>
+
+            <label>Date Of Birth :</label>
+            <input type="date">
+            <br><br>
+
+            <label>Address :</label>
+            <input type="text" placeholder="Street:-  House:-  Road:-" class="full-width"><br>
+
+            <label>Blood Group :</label>
+            <select>
+                <option>Select</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select><br><br>
+
+            <label>Department :</label>
+            <input type="radio" name="dept"> CSE
+            <input type="radio" name="dept"> EEE
+            <input type="radio" name="dept"> BBA<br><br>
+
+            <label>Course :</label>
+            <input type="checkbox"> C
+            <input type="checkbox"> C++
+            <input type="checkbox"> Java
+            <input type="checkbox"> AI
+            <input type="checkbox"> Machine learning
+            <input type="checkbox"> Robotics<br><br>
+
+            <label>Photo :</label>
+            <input type="file"><br><br>
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
