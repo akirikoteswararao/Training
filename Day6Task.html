@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tasks</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= GLOBAL STYLES ================= */
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            align-items: center;
+
+        }
+
+        /* ================= TASK 1: PROFILE CARD ================= */
+        .card {
+            width: 320px;
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            align-items: center;
+            margin-left: 500px;
+
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e1306c;
+            margin-bottom: 15px;
+        }
+
+        .username {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .stat p {
+            margin: 0;
+            font-size: 12px;
+            color: rgb(255, 255, 255);
+        }
+
+        .btn {
+            padding: 8px 16px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+        }
+
+        /* ================= TASK 2: HERO SECTION ================= */
+        .hero {
+            height: 100vh;
+
+            /* Gradient overlay + Image */
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("data:image/jpeg;base64,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");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            background: #ff5722;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background: #e64a19;
+        }
+
+        /* ================= TASK 3: STACKED CONTENT ================= */
+        .section {
+            width: 80%;
+            margin: 50px auto;
+           
+        }
+
+        .content-block {
+            background: rgb(0, 0, 0);
+            color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .content-block h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .content-block p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= TASK 1 ================= -->
+    <div class="card">
+        <img src="Assets/My Image.jpeg" alt="Profile" class="profile-img">
+
+        <div class="username">john_doe</div>
+        <div class="bio">📷 Photographer | Traveler | Dreamer</div>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>120</h3>
+                <p>Posts</p>
+            </div>
+            <div class="stat">
+                <h3>5.2K</h3>
+                <p>Followers</p>
+            </div>
+            <div class="stat">
+                <h3>300</h3>
+                <p>Following</p>
+            </div>
+        </div>
+
+        <button class="btn">Follow</button>
+    </div>
+    <!-- ================= TASK 2 ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Modern Web Experiences</h1>
+            <p>I develop websites that are fast, clean, and reliable.
+                My focus is on creating responsive and user-friendly designs.
+                I write code that is easy to understand and maintain.
+                Every project is built with modern web standards.
+                I ensure smooth performance across all browsers and devices.
+                User experience is always at the center of my work.
+                I aim to deliver solutions that are both practical and efficient.
+                I continuously improve my skills to stay up to date.
+                I turn ideas into functional and engaging websites.
+                I believe in building with purpose and clarity.</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <!-- ================= TASK 3 ================= -->
+    <div class="section">
+
+        <div class="content-block">
+            <h2>HTML</h2>
+            <p>HTML is the foundation of every website.
+                It is used to structure content on the web.
+                With HTML, I create elements like headings, paragraphs, images, and links.
+                It defines how content is organized and displayed in the browser.
+                Semantic HTML improves accessibility and SEO.
+                I ensure clean and well-structured markup in every project.
+                It acts as the backbone of all web applications.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>CSS</h2>
+            <p>CSS is used to style and design web pages.
+                It controls colors, layouts, spacing, and fonts.
+                With CSS, I create responsive designs for all screen sizes.
+                I use modern techniques like Flexbox and Grid.
+                It helps make websites visually attractive and user-friendly.
+                I focus on consistency and clean design principles.
+                Animations and transitions enhance user experience.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>JAVA SCRIPT</h2>
+            <p>JavaScript adds interactivity to websites.
+                It makes web pages dynamic and responsive to user actions.
+                With JavaScript, I handle events, animations, and data updates.
+                It allows building powerful features like forms and APIs.
+                I write efficient and optimized scripts for performance.
+                Modern JavaScript enables building full web applications.
+                It brings life and functionality to static web pages.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
